@@ -141,7 +141,17 @@ fig_chart = px.line(
     y="emissions",
     color="country",
     labels={"year": "Year", "emissions": "Emissions"},
-    title="CO2 Emissions from 1990 to 2022 for Afghanistan, Colombia, <br> Germany, Japan and Zimbabwe",
+    title="CO2 Emissions from 1990 to 2022 for Afghanistan, <br>Colombia, Germany, Japan, and Zimbabwe",
+)
+
+# Adjust layout to add space between title and plot
+fig_chart.update_layout(
+    title={
+        "y": 0.95,  # Position title higher (default is 1.0)
+        "x": 0.5,  # Center the title
+        "xanchor": "center",
+        "yanchor": "top",
+    }
 )
 
 fig_chart.show()
