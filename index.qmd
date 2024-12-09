@@ -146,12 +146,13 @@ fig_chart = px.line(
 
 # Adjust layout to add space between title and plot
 fig_chart.update_layout(
+    margin_t=100,
     title={
         "y": 0.95,  # Position title higher (default is 1.0)
         "x": 0.5,  # Center the title
         "xanchor": "center",
         "yanchor": "top",
-    }
+    },
 )
 
 fig_chart.show()
